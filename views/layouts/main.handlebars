@@ -1,59 +1,70 @@
 <!DOCTYPE html>
 <!--Author     : @arboshiki-->
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <title>LobiAdmin</title>
-        <link rel="shortcut icon" href="img/logo/lobiadmin-logo-16.ico" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>LobiAdmin</title>
+  <link rel="shortcut icon" href="img/logo/lobiadmin-logo-16.ico"/>
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css"/>
 
-        <!--lobiadmin-with-plugins.css contains all LobiAdmin css plus lobiplugins all css files, plus third party plugins-->
-        <link rel="stylesheet" href="css/lobiadmin-with-plugins.css"/>
-        <!--Put your css here-->
+  <!--lobiadmin-with-plugins.css contains all LobiAdmin css plus lobiplugins all css files, plus third party plugins-->
+  <link rel="stylesheet" href="css/lobiadmin-with-plugins.css"/>
+  <!--Put your css here-->
 
-        <!--This css file is for only demo usage-->
-        <link rel="stylesheet" href="css/demo.css"/>
-    </head>
-    <body>
-        {{> header }}
-        {{> navigation }}
-        <div id="main">
-            <div id="ribbon" class="hidden-print">
-                <a href="#dashboard" class="btn-ribbon" data-container="#main" data-toggle="tooltip" data-title="Show dashboard"><i class="fa fa-home"></i></a>
-                <span class="vertical-devider">&nbsp;</span>
-                <button class="btn-ribbon" data-container="#main" data-action="reload" data-toggle="tooltip" data-title="Reload content by ajax"><i class="fa fa-refresh"></i></button>
-                <ol class="breadcrumb">
-                </ol>
-            </div>
-            <div id="content">
-              {{{ body }}}
-            </div>
-        </div>
-        <!--Setting box-->
-        {{> settings }}
+  <!--This css file is for only demo usage-->
+  <link rel="stylesheet" href="css/demo.css"/>
+</head>
+<body>
+{{> header }}
+{{> navigation }}
+<div id="main">
+  <div id="ribbon" class="hidden-print">
+    <a href="#dashboard" class="btn-ribbon" data-container="#main" data-toggle="tooltip" data-title="Show dashboard"><i
+            class="fa fa-home"></i></a>
+    <span class="vertical-devider">&nbsp;</span>
+    <button class="btn-ribbon" data-container="#main" data-action="reload" data-toggle="tooltip"
+            data-title="Reload content by ajax"><i class="fa fa-refresh"></i></button>
+    <ol class="breadcrumb">
+    </ol>
+  </div>
+  <div id="content">
+    {{{ body }}}
+  </div>
+</div>
+<!--Setting box-->
+{{> settings }}
 
-        <!--Loading indicator for ajax page loading-->
-        <div class="spinner spinner-horizontal hide">
-            <span class="spinner-text">Loading...</span>
-            <div class="bounce1"></div>
-            <div class="bounce2"></div>
-            <div class="bounce3"></div>
-        </div>
+<!--Loading indicator for ajax page loading-->
+<div class="spinner spinner-horizontal hide">
+  <span class="spinner-text">Loading...</span>
+  <div class="bounce1"></div>
+  <div class="bounce2"></div>
+  <div class="bounce3"></div>
+</div>
 
-        <script type="text/javascript" src="js/lib/jquery.js"></script>
-        <script type="text/javascript" src="js/lib/jquery-ui.js"></script>
-        <script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
-        <script type="text/javascript" src="js/lobi-plugins/lobibox.js"></script>
-        <script type="text/javascript" src="js/lobi-plugins/lobipanel.js"></script>
-        <script type="text/javascript" src="js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.js"></script>
+<script type="text/javascript" src="js/lib/jquery.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.js"></script>
+<script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
+<script type="text/javascript" src="js/lobi-plugins/lobibox.js"></script>
+<script type="text/javascript" src="js/lobi-plugins/lobipanel.js"></script>
+<script type="text/javascript" src="js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.js"></script>
 
-        <!--Make sure that config.js file is loaded before LobiAdmin.js-->
-        <script type="text/javascript" src="js/config.js"></script>
-        <script type="text/javascript" src="js/LobiAdmin.js"></script>
-        <script type="text/javascript" src="js/app.js"></script>
-        <script type="text/javascript" src="js/demo.js"></script>
-    </body>
+<script type="text/javascript" src="js/plugin/sparkline/jquery.sparkline.min.js"></script>
+<script type="text/javascript" src="js/plugin/chartjs/Chart.min.js"></script>
+<script type="text/javascript" src="js/lobi-plugins/lobilist.min.js"></script>
+<script type="text/javascript" src="js/plugin/moment/moment.min.js"></script>
+<script type="text/javascript" src="js/plugin/fullcalendar/fullcalendar.min.js"></script>
+
+<!--Make sure that config.js file is loaded before LobiAdmin.js-->
+<script type="text/javascript" src="js/config.js"></script>
+<script type="text/javascript" src="js/LobiAdmin.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/demo.js"></script>
+{{#each scripts}}
+  <script type="text/javascript" src="{{script}}"></script>
+{{/each}}
+</body>
 </html>

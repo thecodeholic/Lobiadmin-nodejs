@@ -3,7 +3,8 @@
  * Home page.
  */
 exports.index = (req, res) => {
-  res.render('home', {
-    title: 'Home'
+  res.render('dashboard', {
+    title: 'Dashboard',
+    scripts: [{ script: 'js/dashboard.js' }]
   });
 };

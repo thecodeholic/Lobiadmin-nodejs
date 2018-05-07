@@ -36,9 +36,9 @@ $(function () {
   });
 
   //LobiBox default options
-  // Lobibox.notify.OPTIONS = $.extend({}, Lobibox.notify.OPTIONS, {
-  //   soundPath: 'sound/lobibox/'
-  // });
+  Lobibox.notify.OPTIONS = $.extend({}, Lobibox.notify.OPTIONS, {
+    soundPath: 'sound/lobibox/'
+  });
 
   /**
    * When this element is clicked email will be opened by the data-key="" attribute of clicked element
