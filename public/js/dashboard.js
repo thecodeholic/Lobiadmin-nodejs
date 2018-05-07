@@ -334,4 +334,17 @@ $(function () {
   initChartjs();
   initLobiList();
   initPage();
+
+  setTimeout(function () {
+    //All demo scripts go here
+    Lobibox.notify('info', {
+      img: 'img/users/me2.jpg',
+      sound: false,
+      position: 'top right',
+      delay: 15000,
+      showClass: 'fadeInDown',
+      title: 'Welcome to LobiAdmin.',
+      msg: 'LobiAdmin is fully responsive ajax based web app with unique components and exclusive plugins'
+    });
+  }, 1000);
 });

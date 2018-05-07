@@ -1,0 +1,96 @@
+<!--Author      : @arboshiki-->
+<div id="event-calendar">
+  <div class="callout callout-info">
+    <p>FullCalendar is a jQuery plugin that provides a full-sized, drag & drop event calendar like the one below.
+      It uses AJAX to fetch events on-the-fly and is easily configured to use your own feed format.
+      It is visually customizable with a rich API.
+      <a href="http://fullcalendar.io/" target="_blank">Read more...</a>
+    </p>
+  </div>
+  <div class="callout callout-info">
+    <ul>
+      <li>Click on the event to show edit window.</li>
+      <li>Click on empty space to create new event.</li>
+    </ul>
+  </div>
+  <div class="panel panel-light">
+    <div class="panel-heading">
+      <div class="panel-title">
+        <h4>Events calendar</h4>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div id="calendar-demo"></div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="addEventModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add event</h4>
+      </div>
+      <div class="modal-body">
+        <form action>
+          <div class="form-group">
+            <label class="control-label">Event style</label>
+            <div class="btn-group btn-group-justified btn-group-event-style" data-toggle="buttons">
+              <label class="btn btn-primary active">
+                <input type="radio" name="style" value="bg-primary" checked> <i class="fa fa-check"></i>
+              </label>
+              <label class="btn bg-success text-white">
+                <input type="radio" name="style" value="bg-success"> <i class="fa fa-check"></i>
+              </label>
+              <label class="btn bg-danger text-white">
+                <input type="radio" name="style" value="bg-danger"> <i class="fa fa-check"></i>
+              </label>
+              <label class="btn bg-info text-white">
+                <input type="radio" name="style" value="bg-info"> <i class="fa fa-check"></i>
+              </label>
+              <label class="btn bg-warning text-white">
+                <input type="radio" name="style" value="bg-warning"> <i class="fa fa-check"></i>
+              </label>
+              <label class="btn bg-gray text-white">
+                <input type="radio" name="style" value="bg-gray"> <i class="fa fa-check"></i>
+              </label>
+              <label class="btn bg-cyan text-white">
+                <input type="radio" name="style" value="bg-cyan"> <i class="fa fa-check"></i>
+              </label>
+              <label class="btn bg-purple text-white">
+                <input type="radio" name="style" value="bg-purple"> <i class="fa fa-check"></i>
+              </label>
+              <label class="btn bg-pink text-white">
+                <input type="radio" name="style" value="bg-pink"> <i class="fa fa-check"></i>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <input type="text" name="date-period" class="form-control"/>
+          </div>
+          <div class="form-group">
+            <label class="checkbox lobicheck">
+              <input type="checkbox" name="allday" checked>
+              <i></i> All day
+            </label>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Event title</label>
+            <input type="text" class="form-control" name="title" placeholder="Event title"/>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Event description</label>
+            <textarea rows="3" class="form-control" name="desc"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary btn-add">Add event</button>
+      </div>
+    </div>
+  </div>
+</div>
