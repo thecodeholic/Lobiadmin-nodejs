@@ -72,8 +72,8 @@ app.set('view engine', 'handlebars');
 app.use(expressStatusMonitor());
 app.use(compression());
 app.use(sass({
-  src: path.join(__dirname, 'public'),
-  dest: path.join(__dirname, 'public')
+  src: path.join(__dirname, 'assets/scss'),
+  dest: path.join(__dirname, 'public/css')
 }));
 app.use(logger('dev'));
 app.use(bodyParser.json());
